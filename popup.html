@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy-Paste Link Shortcut</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Link Shortcuts</h1>
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="commandInput" 
+                placeholder="Type /github, /linkedin, etc..."
+                autocomplete="off"
+            >
+            <button id="copyBtn">Copy</button>
+        </div>
+        
+        <div class="result-section" id="resultSection" style="display: none;">
+            <p id="resultText"></p>
+            <button id="copyResultBtn">Copy Link</button>
+        </div>
+
+        <div class="shortcuts-list">
+            <h3>Available Shortcuts:</h3>
+            <ul id="shortcutsList"></ul>
+        </div>
+
+        <div class="settings-section">
+            <button id="settingsBtn">⚙️ Settings</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

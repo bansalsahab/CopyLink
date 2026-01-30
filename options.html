@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Shortcuts Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚙️ Link Shortcuts Settings</h1>
+        
+        <div class="settings-panel">
+            <h2>Manage Your Shortcuts</h2>
+            
+            <div class="shortcuts-table">
+                <div class="table-header">
+                    <div class="col-command">Command</div>
+                    <div class="col-url">URL / Link</div>
+                    <div class="col-action">Action</div>
+                </div>
+                <div id="shortcutsContainer"></div>
+            </div>
+
+            <div class="add-shortcut-section">
+                <h3>Add New Shortcut</h3>
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="newCommand" 
+                        placeholder="e.g., /mylink"
+                        class="form-input"
+                    >
+                    <input 
+                        type="text" 
+                        id="newURL" 
+                        placeholder="e.g., https://example.com"
+                        class="form-input"
+                    >
+                    <button id="addBtn" class="btn-primary">+ Add Shortcut</button>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="resetBtn" class="btn-secondary">Reset to Defaults</button>
+                <button id="saveBtn" class="btn-primary">Save Changes</button>
+            </div>
+
+            <div id="statusMessage" class="status-message"></div>
+        </div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>

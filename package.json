@@ -1,0 +1,20 @@
+{
+  "name": "copy-paste-extension",
+  "version": "1.0.0",
+  "description": "Browser extension for instant link copying using shortcut commands",
+  "main": "background.js",
+  "scripts": {
+    "dev": "echo 'Open chrome://extensions and load unpacked folder'",
+    "build": "echo 'Extension is ready to use'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "extension",
+    "productivity",
+    "clipboard",
+    "shortcuts",
+    "links"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

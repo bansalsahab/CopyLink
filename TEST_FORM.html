@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Form - Link Shortcut Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            color: #1976d2;
+        }
+        
+        .instructions h3 {
+            margin: 0 0 10px 0;
+        }
+        
+        .instructions ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔗 Link Shortcut Extension - Test Form</h1>
+    
+    <div class="instructions">
+        <h3>How to test:</h3>
+        <ul>
+            <li>Type <code>/github</code> in any field and press <strong>Tab</strong> or <strong>Enter</strong></li>
+            <li>Type <code>/linkedin</code> to insert LinkedIn profile</li>
+            <li>Type <code>/portfolio</code> to insert portfolio link</li>
+            <li>Try other shortcuts like <code>/twitter</code>, <code>/email</code>, <code>/resume</code></li>
+            <li>A suggestion box will appear showing the link that will be inserted</li>
+        </ul>
+    </div>
+    
+    <form>
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name...">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email or type /email">
+        </div>
+        
+        <div class="form-group">
+            <label for="github">GitHub Profile</label>
+            <input type="text" id="github" placeholder="Type /github here and press Tab">
+        </div>
+        
+        <div class="form-group">
+            <label for="linkedin">LinkedIn Profile</label>
+            <input type="text" id="linkedin" placeholder="Type /linkedin here and press Tab">
+        </div>
+        
+        <div class="form-group">
+            <label for="portfolio">Portfolio Website</label>
+            <input type="text" id="portfolio" placeholder="Type /portfolio here and press Tab">
+        </div>
+        
+        <div class="form-group">
+            <label for="twitter">Twitter Profile</label>
+            <input type="text" id="twitter" placeholder="Type /twitter here and press Tab">
+        </div>
+        
+        <div class="form-group">
+            <label for="resume">Resume/CV Link</label>
+            <input type="text" id="resume" placeholder="Type /resume here and press Tab">
+        </div>
+        
+        <div class="form-group">
+            <label for="bio">Bio / About</label>
+            <textarea id="bio" placeholder="Type multiple shortcuts here like /github and /linkedin separated by spaces..."></textarea>
+        </div>
+        
+        <button type="submit">Submit Form</button>
+    </form>
+    
+    <script>
+        // Just for demonstration
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Form would be submitted! Check the field values in browser dev tools.');
+            console.log('Form data:', {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                github: document.getElementById('github').value,
+                linkedin: document.getElementById('linkedin').value,
+                portfolio: document.getElementById('portfolio').value,
+                twitter: document.getElementById('twitter').value,
+                resume: document.getElementById('resume').value,
+                bio: document.getElementById('bio').value
+            });
+        });
+    </script>
+</body>
+</html>
